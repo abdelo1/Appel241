@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <EditText
+        android:id="@+id/Search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:hint="Rechercher contact...."
+        android:padding="12dp"
+        android:layout_margin="7dp"
+        android:clickable="true" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+
+        app:popupTheme="@style/AppTheme"
+        app:titleTextColor="#FFF" />
+    <TextView
+        android:id="@+id/nbContact"
+        android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+        android:text=""
+        android:textColor="#fff"
+        android:layout_alignParentRight="true"
+        android:layout_margin="14dp"
+        android:layout_alignParentEnd="true"
+        android:textSize="18dp"
+
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Search"
+        android:layout_marginTop="0dp" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/Loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Mis à jour de votre répertoire téléphonique.."
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
